@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+  --purple: rebeccapurple;
+  --deep-purple: #32164d;
+  --cream: #fffaf4;
+  --text: #2a2630;
+  --muted: #8c8193;
+  --border: #eadfeb;
+}
+
+/* Base */
+.contact-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--text);
+  background: var(--cream);
+  font-family: "DM Sans", sans-serif;
+}
+
+.contact-page *,
+.contact-page *::before,
+.contact-page *::after {
+  box-sizing: border-box;
+}
+
+/* Hero */
+.contact-hero {
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 7%;
+  color: #fff;
+  background: linear-gradient(110deg, #32164d, #693b91);
+}
+
+.contact-hero::after {
+  position: absolute;
+  right: -120px;
+  bottom: -260px;
+  width: 540px;
+  height: 540px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px rgba(255, 255, 255, 0.05);
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(600px, 100%);
+}
+
+.contact-kicker,
+.section-label {
+  color: #dcbcf0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.contact-hero h1 {
+  margin: 17px 0 12px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1.05;
+}
+
+.contact-hero h1 em {
+  color: #e2bdf7;
+  font-style: normal;
+}
+
+.contact-hero p {
+  max-width: 500px;
+  margin: 0;
+  color: #eadff0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.hero-food-mark {
+  position: absolute;
+  right: 15%;
+  z-index: 1;
+  font-size: 90px;
+  opacity: 0.65;
+  transform: rotate(-12deg);
+}
+
+/* Main content */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: 55px;
+  width: min(1080px, 88%);
+  margin: 0 auto;
+  padding: 70px 0 90px;
+}
+
+.contact-info,
+.contact-form-card {
+  min-width: 0;
+}
+
+.contact-info h2 {
+  margin: 10px 0 15px;
+  color: var(--deep-purple);
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.contact-info h2 em {
+  color: var(--purple);
+  font-style: normal;
+}
+
+.info-intro {
+  max-width: 370px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Contact cards */
+.info-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.info-box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  color: inherit;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.info-box:hover {
+  border-color: #c9a9d8;
+  box-shadow: 0 8px 18px rgba(50, 22, 77, 0.08);
+  transform: translateY(-2px);
+}
+
+.info-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  place-items: center;
+  color: var(--purple);
+  background: #f3ecf8;
+  border-radius: 9px;
+}
+
+.contact-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.info-box small,
+.info-box strong {
+  display: block;
+}
+
+.info-box small {
+  margin-bottom: 3px;
+  color: #a79baa;
+  font-size: 9px;
+}
+
+.info-box strong {
+  overflow-wrap: anywhere;
+  color: #4c3c54;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.info-box b {
+  margin-left: auto;
+  color: #b8a4c2;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.response-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.response-note > span {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  place-items: center;
+  color: var(--purple);
+  background: #f1e9f7;
+  border-radius: 50%;
+}
+
+.response-note p {
+  margin: 0;
+}
+
+.response-note strong,
+.response-note small {
+  display: block;
+}
+
+.response-note strong {
+  color: #5e4868;
+  font-size: 10px;
+}
+
+.response-note small {
+  margin-top: 3px;
+  color: #aaa0b0;
+  font-size: 9px;
+}
+
+/* Form card */
+.contact-form-card {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(50, 22, 77, 0.07);
+}
+
+.form-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0eaf2;
+}
+
+.form-heading h2 {
+  margin: 8px 0 4px;
+  color: var(--deep-purple);
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.form-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.form-number {
+  color: #d8c7df;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.form-status {
+  margin-top: 18px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.form-status.success {
+  color: #287652;
+  background: #eaf8f0;
+  border: 1px solid #c8ecd8;
+}
+
+.form-status.error {
+  color: #b54e5e;
+  background: #fff0f2;
+  border: 1px solid #f6d0d7;
+}
+
+.contact-form-card form {
+  display: grid;
+  gap: 17px;
+  padding-top: 23px;
+}
+
+.contact-form-card label {
+  display: grid;
+  gap: 7px;
+}
+
+.contact-form-card label > span {
+  color: #5e5365;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+  width: 100%;
+  color: #3d3144;
+  border: 1px solid #e8e1eb;
+  border-radius: 7px;
+  outline: none;
+  background: #fdfcff;
+  font:
+    12px "DM Sans",
+    sans-serif;
+  transition: 0.2s ease;
+}
+
+.contact-form-card input {
+  height: 43px;
+  padding: 0 12px;
+}
+
+.contact-form-card textarea {
+  min-height: 115px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+  border-color: #b595c7;
+  box-shadow: 0 0 0 3px rgba(102, 51, 153, 0.08);
+}
+
+.contact-form-card input::placeholder,
+.contact-form-card textarea::placeholder {
+  color: #b4abb9;
+}
+
+.send-button {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  background: var(--purple);
+  box-shadow: 0 8px 16px rgba(102, 51, 153, 0.16);
+  font-size: 11px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.send-button span {
+  font-size: 18px;
+}
+
+.send-button:hover:not(:disabled) {
+  background: var(--deep-purple);
+  transform: translateY(-1px);
+}
+
+.send-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.form-footnote {
+  margin: -5px 0 0;
+  color: #aaa0b0;
+  font-size: 9px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    width: min(620px, 88%);
+    padding-top: 55px;
+  }
+
+  .hero-food-mark {
+    right: 7%;
+    opacity: 0.45;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .contact-hero {
+    min-height: 335px;
+    padding: 55px 8%;
+  }
+
+  .contact-hero h1 {
+    font-size: 43px;
+  }
+
+  .contact-hero p {
+    font-size: 12px;
+  }
+
+  .hero-food-mark {
+    right: -4px;
+    bottom: 17px;
+    font-size: 65px;
+  }
+
+  .contact-layout {
+    width: 88%;
+    padding: 45px 0 65px;
+  }
+
+  .contact-info h2 {
+    font-size: 30px;
+  }
+
+  .contact-form-card {
+    padding: 22px 17px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .form-heading h2 {
+    font-size: 22px;
+  }
+}
+
+/* Message reply checker */
+.reply-check-box {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 18px;
+  padding: 12px;
+  color: #4f3b5d;
+  border: 1px solid #eadcf0;
+  border-radius: 9px;
+  background: #fbf7fd;
+  font-size: 11px;
+}
+
+.reply-check-box button {
+  justify-self: start;
+  padding: 7px 10px;
+  color: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  background: rebeccapurple;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.reply-check-box button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.reply-check-box p {
+  margin: 0;
+  color: #6f6078;
+  line-height: 1.5;
+}
